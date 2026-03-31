@@ -385,7 +385,7 @@ nav {
 .pcard-cta:hover .pcard-arrow { transform: translateX(4px); }
 
 .pcard-title a {
-  color: inherit;
+  color: #fff;
   text-decoration: none;
 }
 .pcard-title a:hover { opacity: 0.8; }
