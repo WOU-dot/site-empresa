@@ -1,0 +1,424 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#111111" />
+  <title>WOU</title>
+  <link rel="icon" type="image/png" href="assets/LOGO/favcom.png" />
+  <link rel="stylesheet" href="assets/style.css" />
+</head>
+
+<body>
+
+  <nav id="mainNav">
+    <img class="logo" src="assets/LOGO/wou.svg" alt="WOU" />
+    <ul class="nav-links" id="navLinks">
+      <div class="nav-indicator" id="navIndicator"></div>
+      <li><a href="#" class="nav-item active" data-index="0">Início</a></li>
+      <li><a href="#" class="nav-item" data-index="1">Portfólio</a></li>
+      <li><a href="#" class="nav-item" data-index="2">Contato</a></li>
+    </ul>
+    <button class="burger" id="burgerBtn" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
+
+  <!-- MOBILE MENU OVERLAY -->
+  <div class="mobile-menu" id="mobileMenu">
+    <a href="#" class="mobile-nav-item" data-index="0">Início</a>
+    <a href="#" class="mobile-nav-item" data-index="1">Portfólio</a>
+    <a href="#" class="mobile-nav-item" data-index="2">Contato</a>
+  </div>
+
+  <!-- SCREEN 0: INÍCIO -->
+  <div class="main-screen" id="screenInicio">
+
+    <canvas id="c"></canvas>
+
+    <div id="introPanel">
+      <div class="intro-text-block">
+        <p>Experiências digitais<br>de alta performance</p>
+      </div>
+      <div class="intro-scroll-hint" id="introHint">
+        <span>scroll</span>
+        <div class="scroll-arrow"></div>
+      </div>
+    </div>
+
+    <div class="white-panel" id="whitePanel">
+      <div class="panel-text panel-text--left">
+        <p id="phraseLeft">Tratamos sua presença digital como um ativo estratégico — não apenas um canal de comunicação. Cada decisão parte do negócio, do mercado e do perfil do seu público, garantindo que a experiência transmita a autoridade que o seu nicho exige.</p>
+      </div>
+      <div class="panel-text panel-text--right">
+        <p id="phraseRight">Nossa arquitetura une estética rigorosa e performance técnica de alto nível. Entregamos sistemas limpos, coerentes e escaláveis — onde a beleza não é ornamento, mas consequência direta da precisão com que cada elemento foi construído.</p>
+      </div>
+      <div class="panel-spheres"><canvas id="spheresCanvas"></canvas></div>
+    </div>
+
+    <div class="method-panel" id="methodPanel">
+      <canvas id="gridCanvas"></canvas>
+      <canvas id="wireframeCanvas"></canvas>
+      <div class="cards-container">
+        <div class="mcard">
+          <div class="mcard-num">01</div>
+          <div class="mcard-title">Diagnóstico Estratégico</div>
+          <div class="mcard-subtitle">Fundação e Direcionamento.</div>
+          <p class="mcard-desc">Mapeamos os objetivos de negócio, a psicologia do público e os diferenciais da oferta. Criamos o blueprint de uma presença digital que não apenas existe, mas domina o seu nicho.</p>
+        </div>
+        <div class="mcard">
+          <div class="mcard-num">02</div>
+          <div class="mcard-title">Arquitetura de Conversão</div>
+          <div class="mcard-subtitle">Narrativa e Estrutura de Fluxo.</div>
+          <p class="mcard-desc">Projetamos a jornada do usuário com foco em autoridade. Onde o design encontra a psicologia de vendas para guiar o seu cliente do primeiro impacto à decisão final, sem atritos.</p>
+        </div>
+        <div class="mcard">
+          <div class="mcard-num">03</div>
+          <div class="mcard-title">Engenharia de Alta Performance</div>
+          <div class="mcard-subtitle">Desenvolvimento e Estética Imersiva.</div>
+          <p class="mcard-desc">A união de design de alto nível, ativos 3D e código otimizado. Construímos ecossistemas digitais leves, ultra-rápidos e visualmente impecáveis que transmitem o valor real do seu produto.</p>
+        </div>
+        <div class="mcard">
+          <div class="mcard-num">04</div>
+          <div class="mcard-title">Implementação &amp; Evolução</div>
+          <div class="mcard-subtitle">Handoff e Inteligência de Dados.</div>
+          <p class="mcard-desc">Entrega de assets organizados e suporte técnico. Garantimos que sua infraestrutura digital esteja pronta para escalar, com orientações claras para manter o padrão de excelência em cada nova campanha.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="style-panel" id="stylePanel">
+      <div class="orbs-container">
+        <div class="orb"></div>
+        <div class="orb"></div>
+        <div class="orb"></div>
+        <div class="orb"></div>
+        <div class="orb"></div>
+        <div class="orb"></div>
+        <div class="orb"></div>
+        <div class="orb"></div>
+        <div class="orb"></div>
+      </div>
+
+      <div class="style-content-wrapper" id="styleWrapper">
+        <div class="style-section">
+          <div class="testim-header">
+            <div class="black-dot"></div>
+            <h3>QUEM CONFIA NO STUDIO</h3>
+          </div>
+          <div class="testim-slider">
+            <div class="testim-track" id="testimTrack">
+              <div class="testim-card">
+                <p class="testim-quote">"O site superou todas as expectativas técnicas; a interface ficou extremamente intuitiva e o desempenho está impecável. Um trabalho de alto nível."</p>
+                <div class="testim-author">— Lucas Almeida</div>
+              </div>
+              <div class="testim-card">
+                <p class="testim-quote">"Tinha medo do processo ser complicado, mas foi tudo muito tranquilo. O site passa uma confiança enorme e funciona perfeitamente em qualquer celular."</p>
+                <div class="testim-author">— Tiago Rocha</div>
+              </div>
+              <div class="testim-card">
+                <p class="testim-quote">"Fiquei impressionada com a qualidade da entrega. É um trabalho de alto padrão que realmente traz retorno; valeu muito a pena o investimento."</p>
+                <div class="testim-author">— Sabrina Lemos</div>
+              </div>
+            </div>
+          </div>
+          <div class="testim-indicators" id="testimIndicators">
+            <span class="dot active"></span>
+            <span class="dot"></span>
+            <span class="dot"></span>
+          </div>
+        </div>
+
+        <div class="style-section faq-section">
+          <div class="faq-container">
+            <div class="faq-header">
+              <div class="black-dot"></div>
+              <h3>DÚVIDAS FREQUENTES</h3>
+            </div>
+            <div class="faq-list">
+              <div class="faq-item">
+                <button class="faq-question">QUAL O PRAZO MÉDIO DE UM PROJETO?<span class="faq-icon">+</span></button>
+                <div class="faq-answer"><p>O cronograma é definido pelo escopo. Landing pages de alta conversão possuem ciclos mais curtos, enquanto ecossistemas complexos passam por diagnóstico, direção criativa, desenvolvimento e o handoff técnico.</p></div>
+              </div>
+              <div class="faq-item">
+                <button class="faq-question">O ATENDIMENTO É EXCLUSIVO PARA O BRASIL?<span class="faq-icon">+</span></button>
+                <div class="faq-answer"><p>Não. Nossa estrutura é 100% preparada para projetos globais. Operamos de forma remota com fluxos de comunicação otimizados para atender clientes em qualquer fuso horário.</p></div>
+              </div>
+              <div class="faq-item">
+                <button class="faq-question">O QUE COMPÕE A ENTREGA FINAL?<span class="faq-icon">+</span></button>
+                <div class="faq-answer"><p>Cobrimos todo o ciclo: desde a estratégia de posicionamento e design visual até a implementação tecnológica com suporte de IA, finalizando com um guia de uso para total autonomia do cliente.</p></div>
+              </div>
+              <div class="faq-item">
+                <button class="faq-question">COMO INICIAR UM PROJETO COM O STUDIO?<span class="faq-icon">+</span></button>
+                <div class="faq-answer"><p>Após o envio do seu formulário, analisamos a viabilidade do projeto. Se houver fit, avançamos para uma breve etapa de alinhamento de expectativas, definição de metas e apresentação da proposta comercial.</p></div>
+              </div>
+              <div class="faq-item">
+                <button class="faq-question">O FOCO É APENAS ESTÉTICO OU ESTRATÉGICO?<span class="faq-icon">+</span></button>
+                <div class="faq-answer"><p>Não criamos apenas "visuais bonitos". Desenvolvemos sistemas de conversão. Unimos narrativa de marca, tecnologia de ponta e análise estratégica para garantir que o design gere resultados mensuráveis.</p></div>
+              </div>
+              <div class="faq-item">
+                <button class="faq-question">TRABALHAM COM PRAZOS DE URGÊNCIA?<span class="faq-icon">+</span></button>
+                <div class="faq-answer"><p>Sim. Para demandas imediatas, operamos com sprints de prioridade. Alinhamos um escopo mínimo viável para garantir uma entrega rápida e funcional, sem abrir mão da qualidade técnica.</p></div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- FOOTER -->
+        <div class="style-section footer-section">
+          <footer class="site-footer">
+
+            <!-- Col 1: Logo -->
+            <div class="footer-col footer-brand">
+              <img class="footer-logo" src="assets/LOGO/wou.svg" alt="WOU" />
+              <p class="footer-tagline">Design e tecnologia<br>que geram resultado.</p>
+            </div>
+
+            <!-- Col 2: Navegação A -->
+            <div class="footer-col">
+              <span class="footer-col-title">Navegação</span>
+              <ul class="footer-links">
+                <li><a href="#" data-footer-nav="0">Início</a></li>
+                <li><a href="#" data-footer-scroll="0">Globo Interativo</a></li>
+                <li><a href="#" data-footer-scroll="1">Nossa Proposta</a></li>
+                <li><a href="#" data-footer-scroll="2">Método</a></li>
+              </ul>
+            </div>
+
+            <!-- Col 3: Navegação B -->
+            <div class="footer-col">
+              <span class="footer-col-title">Explorar</span>
+              <ul class="footer-links">
+                <li><a href="#" data-footer-scroll="3">Depoimentos</a></li>
+                <li><a href="#" data-footer-scroll="4">FAQ</a></li>
+                <li><a href="#" data-footer-nav="1">Portfólio</a></li>
+                <li><a href="#" data-footer-nav="2">Contato</a></li>
+              </ul>
+            </div>
+
+            <!-- Col 4: Formulário -->
+            <div class="footer-col footer-form-col">
+              <span class="footer-col-title">Iniciar Projeto</span>
+              <form class="contact-form footer-contact-form" id="footerContactForm" action="https://formspree.io/f/YOUR_FORM_ID" method="POST" novalidate>
+                <div class="form-row">
+                  <input type="text"  name="nome"  placeholder="Seu Nome"   required />
+                  <input type="email" name="email" placeholder="Seu E-mail" required />
+                </div>
+                <div class="form-row">
+                  <input type="tel"  name="whatsapp" placeholder="Seu WhatsApp" />
+                  <input type="text" name="empresa"  placeholder="Nome da Marca/Empresa" />
+                </div>
+                <div class="form-row">
+                  <input type="text" name="site_instagram" placeholder="Site ou Instagram" />
+                  <input type="text" name="objetivo"       placeholder="Objetivo Principal" />
+                </div>
+                <div class="form-row">
+                  <div class="select-wrapper">
+                    <select name="servico" id="footerSelectServico">
+                      <option value="" disabled selected>Serviço de Interesse</option>
+                      <option value="site">Criação de Site</option>
+                      <option value="lp">Landing Page</option>
+                      <option value="ecommerce">E-commerce</option>
+                      <option value="branding">Branding / Identidade Visual</option>
+                      <option value="social">Gestão de Redes Sociais</option>
+                      <option value="trafego">Tráfego Pago</option>
+                      <option value="outro">Outro</option>
+                    </select>
+                  </div>
+                  <div class="select-wrapper">
+                    <select name="inicio" id="footerSelectInicio">
+                      <option value="" disabled selected>Quando quer iniciar?</option>
+                      <option value="imediato">Imediatamente</option>
+                      <option value="15dias">Em até 15 dias</option>
+                      <option value="1mes">Em até 1 mês</option>
+                      <option value="3meses">Em 2 a 3 meses</option>
+                      <option value="planejando">Ainda estou planejando</option>
+                    </select>
+                  </div>
+                </div>
+                <textarea name="mensagem" placeholder="O que você quer criar conosco?"></textarea>
+                <button type="submit" class="btn-submit" id="footerBtnSubmit">Iniciar Projeto</button>
+                <p class="contact-legal"><strong>Ao enviar, você concorda com nosso contato comercial.</strong></p>
+              </form>
+              <div class="form-success" id="footerFormSuccess">
+                <h2>Mensagem enviada!</h2>
+                <p>Em breve entraremos em contato. Obrigado!</p>
+              </div>
+            </div>
+
+            <div class="footer-bottom">
+              <span>© 2025 WOU Studio. Todos os direitos reservados.</span>
+            </div>
+
+          </footer>
+        </div>
+
+      </div>
+    </div>
+
+  </div><!-- End screenInicio -->
+
+  <!-- SCREEN 1: PORTFOLIO -->
+  <div class="main-screen" id="screenPortfolio">
+    <div class="portfolio-wrapper">
+
+      <div class="portfolio-header">
+        <div class="pf-header-dot"></div>
+        <span class="pf-label">PORTFÓLIO</span>
+        <h1 class="pf-title">Projetos Recentes</h1>
+        <p class="pf-sub">Uma seleção de trabalhos desenvolvidos com precisão técnica e estratégia criativa.</p>
+      </div>
+
+      <div class="portfolio-list">
+
+        <!-- CARD 1 -->
+        <article class="pcard">
+          <div class="pcard-thumb">
+            <video class="pcard-video" preload="auto" muted playsinline
+              src="videos_miniatura/2026-03-30 12-51-36.mkv"></video>
+            <canvas class="pcard-canvas"></canvas>
+            <div class="pcard-scan-hint">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="5 3 19 12 5 21 5 3"/></svg>
+              Passe o mouse para preview
+            </div>
+          </div>
+          <div class="pcard-info">
+            <div class="pcard-tags">
+              <span class="pcard-tag">Branding</span>
+              <span class="pcard-tag">Identidade Visual</span>
+            </div>
+            <h2 class="pcard-title">Identidade Visual Premium</h2>
+            <p class="pcard-desc">Desenvolvimento completo de identidade de marca para empresa do setor de luxo. Criação de logotipo, paleta cromática e sistema visual coerente com o posicionamento estratégico — resultado: aumento de 43% na percepção de valor pela audiência-alvo.</p>
+            <div class="pcard-meta">
+              <span class="pcard-year">2026</span>
+              <span class="pcard-divider">·</span>
+              <span class="pcard-scope">Branding &amp; Motion</span>
+            </div>
+            <a href="#" class="pcard-cta">Ver Projeto <span class="pcard-arrow">→</span></a>
+          </div>
+        </article>
+
+        <!-- CARD 2 -->
+        <article class="pcard">
+          <div class="pcard-thumb">
+            <video class="pcard-video" preload="auto" muted playsinline
+              src="videos_miniatura/2026-03-30 13-40-45.mkv"></video>
+            <canvas class="pcard-canvas"></canvas>
+            <div class="pcard-scan-hint">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="5 3 19 12 5 21 5 3"/></svg>
+              Passe o mouse para preview
+            </div>
+          </div>
+          <div class="pcard-info">
+            <div class="pcard-tags">
+              <span class="pcard-tag">Web Design</span>
+              <span class="pcard-tag">Conversão</span>
+            </div>
+            <h2 class="pcard-title">Landing Page Imersiva</h2>
+            <p class="pcard-desc">Ecossistema digital de alta conversão para produto digital no mercado premium. Arquitetura narrativa construída sobre psicologia de vendas, animações customizadas e performance técnica impecável — 68% de taxa de engajamento no primeiro bloco.</p>
+            <div class="pcard-meta">
+              <span class="pcard-year">2026</span>
+              <span class="pcard-divider">·</span>
+              <span class="pcard-scope">UX &amp; Development</span>
+            </div>
+            <a href="#" class="pcard-cta">Ver Projeto <span class="pcard-arrow">→</span></a>
+          </div>
+        </article>
+
+        <!-- CARD 3 -->
+        <article class="pcard">
+          <div class="pcard-thumb">
+            <video class="pcard-video" preload="auto" muted playsinline
+              src="videos_miniatura/2026-03-30 14-56-45.mkv"></video>
+            <canvas class="pcard-canvas"></canvas>
+            <div class="pcard-scan-hint">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="5 3 19 12 5 21 5 3"/></svg>
+              Passe o mouse para preview
+            </div>
+          </div>
+          <div class="pcard-info">
+            <div class="pcard-tags">
+              <span class="pcard-tag">Motion</span>
+              <span class="pcard-tag">Campanha</span>
+            </div>
+            <h2 class="pcard-title">Campanha Digital 360°</h2>
+            <p class="pcard-desc">Estratégia visual integrada para lançamento de produto em múltiplos canais digitais. Produção de vídeos-manifesto, assets para redes sociais e peças animadas sincronizadas com a identidade da marca — cobertura total do ciclo de atenção.</p>
+            <div class="pcard-meta">
+              <span class="pcard-year">2025</span>
+              <span class="pcard-divider">·</span>
+              <span class="pcard-scope">Motion &amp; Social</span>
+            </div>
+            <a href="#" class="pcard-cta">Ver Projeto <span class="pcard-arrow">→</span></a>
+          </div>
+        </article>
+
+      </div><!-- /portfolio-list -->
+    </div><!-- /portfolio-wrapper -->
+  </div>
+
+  <!-- SCREEN 2: CONTATO -->
+  <div class="main-screen" id="screenContato">
+    <div id="contactWrapper">
+      <div class="contact-header">
+        <div class="contact-dot"></div>
+        <span class="contact-label">CONTATO</span>
+      </div>
+      <h1 class="contact-title">Vamos construir sua<br>nova presença digital.</h1>
+      <p class="contact-sub">Preencha o formulário e entraremos em contato.</p>
+
+      <form class="contact-form" id="contactForm" action="https://formspree.io/f/YOUR_FORM_ID" method="POST" novalidate>
+        <div class="form-row">
+          <input type="text"  name="nome"     placeholder="Seu Nome"   required />
+          <input type="email" name="email"    placeholder="Seu E-mail" required />
+        </div>
+        <div class="form-row">
+          <input type="tel"  name="whatsapp" placeholder="Seu WhatsApp" />
+          <input type="text" name="empresa"  placeholder="Nome da Marca/Empresa" />
+        </div>
+        <div class="form-row">
+          <input type="text" name="site_instagram" placeholder="Site ou Instagram" />
+          <input type="text" name="objetivo"       placeholder="Objetivo Principal" />
+        </div>
+        <div class="form-row">
+          <div class="select-wrapper">
+            <select name="servico" id="selectServico">
+              <option value="" disabled selected>Selecione o Serviço de Interesse</option>
+              <option value="site">Criação de Site</option>
+              <option value="lp">Landing Page</option>
+              <option value="ecommerce">E-commerce</option>
+              <option value="branding">Branding / Identidade Visual</option>
+              <option value="social">Gestão de Redes Sociais</option>
+              <option value="trafego">Tráfego Pago</option>
+              <option value="outro">Outro</option>
+            </select>
+          </div>
+          <div class="select-wrapper">
+            <select name="inicio" id="selectInicio">
+              <option value="" disabled selected>Quando quer iniciar?</option>
+              <option value="imediato">Imediatamente</option>
+              <option value="15dias">Em até 15 dias</option>
+              <option value="1mes">Em até 1 mês</option>
+              <option value="3meses">Em 2 a 3 meses</option>
+              <option value="planejando">Ainda estou planejando</option>
+            </select>
+          </div>
+        </div>
+        <textarea name="mensagem" placeholder="O que você quer criar conosco?"></textarea>
+        <button type="submit" class="btn-submit" id="btnSubmit">Iniciar Projeto</button>
+        <p class="contact-legal"><strong>Ao enviar, você concorda com nosso contato comercial e tratamento dos dados para retorno da aplicação.</strong></p>
+      </form>
+
+      <div class="form-success" id="formSuccess">
+        <h2>Mensagem enviada!</h2>
+        <p>Em breve entraremos em contato. Obrigado!</p>
+      </div>
+    </div>
+  </div>
+
+  <footer></footer>
+
+  <script src="assets/main.js" defer></script>
+</body>
+
+</html>
